@@ -1,0 +1,93 @@
+<div class="container bg-danger-subtle mt-5 mb-5 col-7">
+    <div class="row">
+        <div class="col-10 m-auto">
+            <h3 class="text-center mt-5">Cadastro do Curso</h3>
+            <form [formGroup]="formGroupCurso">
+                <div class="mb-3 mt-4">
+                    <label for="inputName" class="form-label mt-3">Nome: </label>
+                    <input formControlName="name" type="text" class="form-control" id="inputName" aria-describedby="nameHelp">
+                    <div id="nameHelp" class="form-text">Digite o nome do curso</div>
+                </div>
+
+                <div class="mb-3"> 
+                    <label class="form-label mt-3">Período: </label>
+                    <br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" formControlName="turno" value="Manhã" id="manha">
+                        <label class="form-check-label" for="manha">Manhã</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" formControlName="turno" value="Tarde" id="tarde">
+                        <label class="form-check-label" for="tarde">Tarde</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" formControlName="turno" value="Noite" id="noite">
+                        <label class="form-check-label" for="noite">Noite</label>
+                      </div>
+                      
+                </div>
+
+                <div class="mb-3"> 
+                  <label class="form-label mt-3">Disciplinas Optativas: </label>
+                  <br>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" formControlName="disciplinas" value="Matematica" id="matematica">
+                    <label class="form-check-label" for="matematica">Matemática</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" formControlName="disciplinas" value="Fisica" id="fisica">
+                    <label class="form-check-label" for="fisica">Física</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" formControlName="disciplinas" value="Programacao" id="programacao">
+                    <label class="form-check-label" for="programacao">Programação</label>
+                  </div>
+                      
+                </div>
+
+                <div class="mb-3"> 
+                    <label for="inputSemestre" class="form-label">Duração do curso (semestres/ano): </label>
+                    <input formControlName="semestre" type="number" class="form-control" id="inputSemestre" aria-describedby="semestreHelp">
+                </div>
+
+                <div class="mb-3"> 
+                    <label for="inputSigla" class="form-label">Sigla do curso: </label>
+                    <input formControlName="sigla" type="text" class="form-control" id="inputSigla" aria-describedby="siglaHelp">
+                </div>
+                <button type="submit" class="btn btn bg-primary-subtle"  (click)="salvar()" >Salvar</button>
+            </form>
+
+            <h4 class="text-center mt-5 mb-4">Cursos Cadastrados:</h4>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Período</th>
+                    <th scope="col">Disciplina</th>
+                    <th scope="col">Duração</th>
+                    <th scope="col">Sigla</th>
+                    <th scope="col">Remover</th>
+                    <th scope="col">Atualizar</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let c of curso">
+                      <th scope="row">{{c.id}}</th>
+                      <td>{{c.name}}</td>
+                      <td>{{c.turno}}</td>
+                      <td>{{ c.disciplina}}</td>                      
+                      <td>{{c.semestre}}</td>
+                      <td>{{c.sigla}}</td>
+
+                      <td><button class="btn btn bg-danger-subtle" (click)="remover(c)">Remover</button></td>
+
+                    </tr>
+                  </tbody>
+               
+              </table>
+        </div>
+    </div>
+
+</div>

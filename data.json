@@ -1,0 +1,61 @@
+{
+  "estudantes": [
+    {
+      "id": 1,
+      "name": "marcia",
+      "course": "adm"
+    },
+    {
+      "id": 1,
+      "name": "fernanda",
+      "course": "portugues"
+    },
+    {
+      "id": 2,
+      "name": "rafaela linda",
+      "course": "metodologia cientifica humana sobre homens html"
+    }
+  ],
+  "curso": [
+    {
+      "id": 1,
+      "name": "lkj",
+      "turno": "Tarde",
+      "modalidade": true,
+      "semestre": 6,
+      "sigla": "s"
+    },
+    {
+      "id": 2,
+      "name": "aaa",
+      "turno": "Manhã",
+      "estagio": "",
+      "semestre": 2,
+      "sigla": "as"
+    },
+    {
+      "id": 3,
+      "name": "asd",
+      "turno": "Tarde",
+      "disciplina": [],
+      "semestre": 2,
+      "sigla": "addd"
+    },
+    {
+      "id": 4,
+      "name": "asfdf",
+      "turno": "Noite",
+      "disciplina": [],
+      "semestre": 2,
+      "sigla": "asd"
+    },
+    {
+      "id": 5,
+      "name": "ln",
+      "turno": "Tarde",
+      "disciplina": [],
+      "semestre": 9,
+      "sigla": "j"
+    }
+  ]
+}

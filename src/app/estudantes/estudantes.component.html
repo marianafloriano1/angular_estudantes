@@ -1,0 +1,45 @@
+<div class="container bg-danger-subtle mt-5 mb-5 col-7">
+    <div class="row">
+        <div class="col-10 m-auto">
+            <h3 class="text-center mt-5">Cadastro do Aluno</h3>
+            <form [formGroup]="formGroupEstudantes">
+                <div class="mb-3 mt-4">
+                    <label for="inputName" class="form-label mt-3">Nome: </label>
+                    <input formControlName="name" type="text" class="form-control" id="inputName" aria-describedby="nameHelp">
+                    <div id="nameHelp" class="form-text">Digite seu nome</div>
+                </div>
+
+                <div class="mb-3"> 
+                    <label for="inputCourse" class="form-label">Curso: </label>
+                    <input formControlName="course" type="text" class="form-control" id="inputCourse" aria-describedby="courseHelp">
+                    <div id="courseHelp" class="form-text">Digite o nome do curso</div>
+                </div>
+
+                <button type="submit" class="btn btn bg-primary-subtle" (click)="save()" >Salvar</button>
+            </form>
+
+            <h4 class="text-center mt-5 mb-4">Alunos Cadastrados:</h4>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Curso</th>
+                    <th scope="col">Remover</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let s of Estudantes">
+                    <th scope="row">{{s.id}}</th>
+                    <td>{{s.name}}</td>
+                    <td>{{s.course}}</td>
+                    <td><button class="btn btn bg-danger-subtle" (click)="remover(s)">Remover</button></td>
+
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+</div>
