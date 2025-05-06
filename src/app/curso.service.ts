@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { curso } from '../curso';
+import { curso } from './curso';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -25,6 +25,9 @@ export class CursoService {
         return this.http.delete<void>(`${this.apiUrl}/${curso.id}`); 
       }
     
+      atualizar(curso: curso): Observable<curso> {
+        return this.http.put<curso>(`${this.apiUrl}/${curso.id}`, curso);
+      }
    
       
     

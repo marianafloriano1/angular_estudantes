@@ -27,22 +27,17 @@
                       
                 </div>
 
-                <div class="mb-3"> 
-                  <label class="form-label mt-3">Disciplinas Optativas: </label>
-                  <br>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" formControlName="disciplinas" value="Matematica" id="matematica">
-                    <label class="form-check-label" for="matematica">Matemática</label>
+                <div class="mb-3">
+                  <label class="form-label mt-3">Disciplinas Optativas: </label><br>
+                
+                  <div class="form-check form-check-inline" *ngFor="let d of todasDisciplinas">
+                    <input type="checkbox"
+                           class="form-check-input"
+                           [value]="d"
+                           [checked]="disciplinasSelecionadas.includes(d)"
+                           (change)="atualizarDisciplinas(d, $event)">
+                    <label class="form-check-label">{{ d }}</label>
                   </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" formControlName="disciplinas" value="Fisica" id="fisica">
-                    <label class="form-check-label" for="fisica">Física</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" formControlName="disciplinas" value="Programacao" id="programacao">
-                    <label class="form-check-label" for="programacao">Programação</label>
-                  </div>
-                      
                 </div>
 
                 <div class="mb-3"> 
@@ -88,6 +83,10 @@
                
               </table>
         </div>
+        
     </div>
 
+
+
 </div>
+
