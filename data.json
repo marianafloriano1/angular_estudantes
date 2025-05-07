@@ -18,15 +18,36 @@
   ],
   "curso": [
     {
-      "id": 1,
-      "name": "a",
-      "turno": "Manhã",
+      "id": 2,
+      "name": "Analise e Desenvolvimento de Sistemas ",
+      "turno": "Tarde",
       "disciplina": [
-        "Fisica",
-        "Matematica"
+        "Matematica",
+        "Programacao"
       ],
       "semestre": 2,
-      "sigla": "a"
+      "sigla": "ADS"
+    },
+    {
+      "id": 3,
+      "name": "Eventos",
+      "turno": "Noite",
+      "disciplina": [
+        "Matematica"
+      ],
+      "semestre": 4,
+      "sigla": "E"
+    },
+    {
+      "id": 4,
+      "name": "Mecatronica",
+      "turno": "Manhã",
+      "disciplina": [
+        "Matematica",
+        "Fisica"
+      ],
+      "semestre": 4,
+      "sigla": "Mec"
     }
   ]
 }
